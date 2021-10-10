@@ -1,0 +1,13 @@
+.navbar-brand{
+    color:aliceblue;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left:10px;
+}
+.profile{
+    float: right;
+    color:white;
+    text-decoration:none;
+    margin-right:10px;
+}
