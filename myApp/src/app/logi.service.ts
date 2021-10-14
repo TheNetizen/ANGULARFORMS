@@ -1,14 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {HttpClient} from '@angular/common/http'
-
+import {HttpClient, HttpErrorResponse} from '@angular/common/http'
+import {User} from './user'
+import {catchError} from 'rxjs/operators'
+import { throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class LogiService {
-  urllogin="http://localhost:3000/login"
+  
+  url=''
   constructor(private http:HttpClient) { }
-  login(data:any):Observable<any>{
-   return this.http.post<any>(this.urllogin,data)
+  // with error handler 
+  enroll(user: User){
+        return  this.http.post<any>(this.url,user).pipe(catchError(this.errorHandler))
+  }
+  errorHandler(error:HttpErrorResponse){
+    return throwError(error)
+
   }
 }
+
+

@@ -1,3 +1,5 @@
+// Not used 
+
 import { Component, OnInit } from '@angular/core';
 import { LogiService } from '../logi.service';
 
@@ -20,9 +22,6 @@ submitLog(){
     "username":this.username,
     "password":this.password
   }
-  this.serv.login(d).subscribe(
-    (success)=>this.data=success,
-    error=>this.errorMesssage=error.error.message
-  )
+ 
 }
 }

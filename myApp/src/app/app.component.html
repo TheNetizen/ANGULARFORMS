@@ -1,5 +1,19 @@
-<nav class="navbar navbar-inverse bg-dark">
-  <a class="navbar-brand">DREAMY TALES</a>
-  <a class="profile">Profile</a>
-</nav>
-<router-outlet></router-outlet>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse bg-dark">
+    <a class="navbar-brand">DREAMY TALES</a>
+    <a class="profile">Profile</a>
+  </nav>
+  <button [routerLink]="['/templateform']">template form</button>
+  <button [routerLink]="['/reactiveform']">reactive form</button>
+  <router-outlet></router-outlet>
+</body>
+</html>
